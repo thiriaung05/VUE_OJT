@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input placeholder="Enter Text Here" v-model="name" @keydown.enter="submit"/><br>
+        <input placeholder="Enter Text Here" v-model="name" @keydown.enter="submit"/><br><br>
         <li v-for="(message,index) in this.$store.state.message" :item="message" :key="index">
             {{ message }}&nbsp;
              <button @click.prevent="this.$store.commit('deleteMessage', index)">X</button>
